@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+
     let score = document.getElementById("score");
     let counter = 0;
   
@@ -6,5 +6,3 @@ document.addEventListener("DOMContentLoaded", function() {
       counter += 1;
       score.innerHTML = counter;
     }
-  });
-  
