@@ -2,7 +2,14 @@
 let scores = document.getElementById("score");
 let counter = 0;
 let addedvalue = 1;
+let autovalue = 0;
+let func = add_autovalue;
+let run = setInterval("func()", 1000);
 
+function add_autovalue(){
+  counter += autovalue
+  score.innerHTML = counter;
+}
 function harvest() {
   counter += addedvalue;
   score.innerHTML = counter;
@@ -21,3 +28,10 @@ function buyupgrade2(){
     score.innerHTML = counter;
   }
 }
+function buyupgrade3(){
+  if (counter >= 100) {
+    counter -= 100
+    autovalue += 1
+    score.innerHTML = counter;
+  }
+};
