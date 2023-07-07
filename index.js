@@ -1,8 +1,8 @@
 
-    let score = document.getElementById("score");
-    let counter = 0;
+let score = document.getElementById("score");
+let counter = 0;
   
-    function harvest() {
-      counter += 1;
-      score.innerHTML = counter;
-    }
+function harvest() {
+  counter += 1;
+  score.innerHTML = counter;
+}
