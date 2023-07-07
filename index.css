@@ -1,19 +1,27 @@
 body {
     text-align: center;
 }
+.title {
+    font-size: xx-large;
+}
+.score {
+    font-size: xx-large;
+}
 .div1 {
-    height: 100px;
-    width: 200px;
+    height: 100px
 }
 button {
     margin-bottom: 10px;
 }
 .butup1 {
     background-color: red;
+    font-size: xx-large;
 }
 .butup2 {
     background-color: red;
+    font-size: xx-large;
 }
 .butup3 {
     background-color: red;
+    font-size: xx-large;
 }
