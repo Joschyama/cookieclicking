@@ -5,3 +5,9 @@ body {
     height: 100px;
     width: 200px;
 }
+button {
+    margin-bottom: 10px;
+}
+.butup1 {
+    background-color: red;
+}
