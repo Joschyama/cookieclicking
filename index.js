@@ -14,10 +14,22 @@ function enoughcookies(){
   if (counter >= 10) {
     document.getElementById("butup1").style.backgroundColor = "green";
   }
+  if (counter >= 100) {
+    document.getElementById("butup2").style.backgroundColor = "green";
+  }
+  if (counter >= 100) {
+    document.getElementById("butup3").style.backgroundColor = "green";
+  }
 };
 function notenoughcookies(){
   if (counter < 10) {
   document.getElementById("butup1").style.backgroundColor = "red";
+  }
+  if (counter < 100) {
+  document.getElementById("butup2").style.backgroundColor = "red";
+  }
+  if (counter < 100) {
+  document.getElementById("butup3").style.backgroundColor = "red";
   }
 }
 function add_autovalue(){
