@@ -5,6 +5,9 @@ let addedvalue = 1;
 
 function harvest() {
   counter += addedvalue;
+  if (counter >= 1000) {
+    
+  }
   score.innerHTML = counter;
 }
 function buyupgrade1(){
@@ -14,3 +17,10 @@ function buyupgrade1(){
     score.innerHTML = counter;
   }
 };
+function buyupgrade2(){
+  if (counter >= 100) {
+    counter -= 100
+    addedvalue += 10
+    score.innerHTML = counter;
+  }
+}
