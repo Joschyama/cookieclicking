@@ -101,10 +101,6 @@ function harvest() {
     counter += newaddedvalue;
     score.innerHTML = counter;
   }
-  function play() {
-    let audioclick = new Audio();
-    audio.src = "http://sndup.net/qc7f"
-  }
 }
 function buyspec1(){
   if (counter >= 100000){
