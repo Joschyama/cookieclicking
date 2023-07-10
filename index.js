@@ -1,6 +1,6 @@
 
 let scores = document.getElementById("score");
-let counter = 101000;
+let counter = 0;
 let prestige = 0;
 let addedvalue = 1;
 let newaddedvalue = addedvalue * prestige * 2; 
