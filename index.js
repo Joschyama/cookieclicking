@@ -7,12 +7,26 @@ let newaddedvalue = 1 * prestige * 2;
 let autovalue = 0;
 let newautovalue = autovalue * prestige * 2;
 let func1 = add_autovalue;
-let run1 = setInterval("func1()", 1000);
+let cookietime = 1000
+let run1 = setInterval("func1()", cookietime);
 let func2 = enoughcookies;
 let run2 = setInterval("func2()", 10);
 let func3 = notenoughcookies;
 let run3 = setInterval("func3()", 10);
+let func4 = currentclicks;
+let run4 = setInterval("func4()", 10);
 
+function currentclicks() {
+  if (prestige <= 0) {
+    document.getElementById("currentperclick").innerHTML = "Current Cookies per click: " + addedvalue;
+    if (autovalue > 0) {
+      document.getElementById("currentpersec").innerHTML = "Current Cookies per second: " + autovalue;
+    }
+  }
+  else if (prestige > 0) {
+    document.getElementById("currentperclick").innerHTML = "Current Cookies per click: " + newaddedvalue 
+  }
+}
 function enoughcookies(){
   if (counter >= 10) {
     document.getElementById("butup1").style.backgroundColor = "green";
