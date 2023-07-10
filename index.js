@@ -43,6 +43,9 @@ function enoughcookies(){
   if (counter >= 1000) {
     document.getElementById("butup4").style.backgroundColor = "green";
   }
+  if (counter >= 1000) {
+    document.getElementById("butup5").style.backgroundColor = "green";
+  }
 };
 function notenoughcookies(){
   if (counter < 10) {
@@ -56,6 +59,9 @@ function notenoughcookies(){
   }
   if (counter < 1000) {
     document.getElementById("butup4").style.backgroundColor = "red";
+  }
+  if (counter < 1000) {
+    document.getElementById("butup5").style.backgroundColor = "red";
   }
 }
 function add_autovalue(){
@@ -107,6 +113,14 @@ function buyupgrade4(){
     counter -= 1000
     autovalue += 10
     newautovalue = autovalue * prestige * 2;
+    score.innerHTML = counter;
+  }
+};
+function buyupgrade5(){
+  if (counter >= 1000) {
+    counter -= 1000
+    addedvalue += 100
+    newaddedvalue = addedvalue * prestige * 2;
     score.innerHTML = counter;
   }
 };
