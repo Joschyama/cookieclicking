@@ -1,9 +1,11 @@
 
 let scores = document.getElementById("score");
 let counter = 0;
-let addedvalue = 1;
-let autovalue = 0;
 let prestige = 0;
+let addedvalue = 1;
+let newaddedvalue = 1 * prestige * 2; 
+let autovalue = 0;
+let newautovalue = autovalue * prestige * 2;
 let func1 = add_autovalue;
 let run1 = setInterval("func1()", 1000);
 let func2 = enoughcookies;
@@ -44,8 +46,14 @@ function add_autovalue(){
   score.innerHTML = counter;
 }
 function harvest() {
-  counter += addedvalue;
-  score.innerHTML = counter;
+  if (prestige <= 0){
+    counter += addedvalue;
+    score.innerHTML = counter;
+  }
+  else if (prestige > 0) {
+    counter += newaddedvalue;
+    score.innerHTML = counter;
+  }
 }
 function buyupgrade1(){
   if (counter >= 10) {
