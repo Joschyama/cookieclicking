@@ -1,6 +1,6 @@
 
 let scores = document.getElementById("score");
-let counter = 10000000;
+let counter = 0;
 let prestige = 0;
 let addedvalue = 1;
 let newaddedvalue = addedvalue * prestige * 2; 
@@ -55,6 +55,12 @@ function enoughcookies(){
   if (counter >= 100000) {
     document.getElementById("butup8").style.backgroundColor = "green";
   }
+  if (counter >= 100000) {
+    document.getElementById("butspec1").style.backgroundColor = "green";
+  }
+  if (counter >= 1000000) {
+    document.getElementById("loulouboss").style.visibility = "visible"
+  }
 };
 function notenoughcookies(){
   if (counter < 10) {
@@ -80,6 +86,12 @@ function notenoughcookies(){
   }
   if (counter < 100000) {
     document.getElementById("butup8").style.backgroundColor = "red";
+  }
+  if (counter < 100000) {
+    document.getElementById("butspec1").style.backgroundColor = "blueviolet";
+  }
+  if (counter < 1000000) {
+    document.getElementById("loulouboss").style.visibility = "hidden"
   }
 }
 function add_autovalue(){
@@ -179,6 +191,5 @@ function buyupgrade8(){
 function loulouboss(){
   if (counter >= 1000000) {
     counter -= 1000000
-    window.location.replace("/bossfight.html");
   }
 }
