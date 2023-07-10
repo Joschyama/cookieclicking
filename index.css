@@ -20,6 +20,10 @@ body {
 button {
     margin-bottom: 10px;
 }
+.butspec1 {
+    background-color: blueviolet;
+    font-size: xx-large;
+}
 .butup1 {
     background-color: red;
     font-size: xx-large;
@@ -37,6 +41,18 @@ button {
     font-size: xx-large;
 }
 .butup5 {
+    background-color: red;
+    font-size: xx-large;
+}
+.butup6 {
+    background-color: red;
+    font-size: xx-large;
+}
+.butup7 {
+    background-color: red;
+    font-size: xx-large;
+}
+.butup8 {
     background-color: red;
     font-size: xx-large;
 }

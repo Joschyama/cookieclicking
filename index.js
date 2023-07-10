@@ -1,13 +1,13 @@
 
 let scores = document.getElementById("score");
-let counter = 0;
+let counter = 101000;
 let prestige = 0;
 let addedvalue = 1;
 let newaddedvalue = addedvalue * prestige * 2; 
 let autovalue = 0;
 let newautovalue = autovalue * prestige * 2;
 let func1 = add_autovalue;
-let cookietime = 1000
+let cookietime = 1000;
 let run1 = setInterval("func1()", cookietime);
 let func2 = enoughcookies;
 let run2 = setInterval("func2()", 10);
@@ -46,6 +46,15 @@ function enoughcookies(){
   if (counter >= 1000) {
     document.getElementById("butup5").style.backgroundColor = "green";
   }
+  if (counter >= 10000) {
+    document.getElementById("butup6").style.backgroundColor = "green";
+  }
+  if (counter >= 10000) {
+    document.getElementById("butup7").style.backgroundColor = "green";
+  }
+  if (counter >= 100000) {
+    document.getElementById("butup8").style.backgroundColor = "green";
+  }
 };
 function notenoughcookies(){
   if (counter < 10) {
@@ -62,6 +71,15 @@ function notenoughcookies(){
   }
   if (counter < 1000) {
     document.getElementById("butup5").style.backgroundColor = "red";
+  }
+  if (counter < 10000) {
+    document.getElementById("butup6").style.backgroundColor = "red";
+  }
+  if (counter < 10000) {
+    document.getElementById("butup7").style.backgroundColor = "red";
+  }
+  if (counter < 100000) {
+    document.getElementById("butup8").style.backgroundColor = "red";
   }
 }
 function add_autovalue(){
@@ -83,6 +101,16 @@ function harvest() {
     counter += newaddedvalue;
     score.innerHTML = counter;
   }
+}
+function buyspec1(){
+  if (counter >= 100000){
+    counter -= 100000
+    cookietime = 1000 / 2
+    clearInterval(run1);
+    run1 = setInterval("func1()", cookietime);
+    document.getElementById("butspec1").style.visibility = "hidden"
+    score.innerHTML = counter;
+  } 
 }
 function buyupgrade1(){
   if (counter >= 10) {
@@ -124,3 +152,28 @@ function buyupgrade5(){
     score.innerHTML = counter;
   }
 };
+function buyupgrade6(){
+  if (counter >= 10000) {
+    counter -= 10000
+    addedvalue += 1000
+    newaddedvalue = addedvalue * prestige * 2;
+    score.innerHTML = counter;
+  }
+};
+function buyupgrade7(){
+  if (counter >= 10000) {
+    counter -= 10000
+    autovalue += 100
+    newautovalue = autovalue * prestige * 2;
+    score.innerHTML = counter;
+  }
+};
+function buyupgrade8(){
+  if (counter >= 100000) {
+    counter -= 100000
+    autovalue += 1000
+    newautovalue = autovalue * prestige * 2;
+    score.innerHTML = counter;
+  }
+};
+
