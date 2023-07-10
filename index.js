@@ -3,7 +3,7 @@ let scores = document.getElementById("score");
 let counter = 0;
 let prestige = 0;
 let addedvalue = 1;
-let newaddedvalue = 1 * prestige * 2; 
+let newaddedvalue = addedvalue * prestige * 2; 
 let autovalue = 0;
 let newautovalue = autovalue * prestige * 2;
 let func1 = add_autovalue;
@@ -25,6 +25,9 @@ function currentclicks() {
   }
   else if (prestige > 0) {
     document.getElementById("currentperclick").innerHTML = "Current Cookies per click: " + newaddedvalue 
+    if (autovalue > 0) {
+      document.getElementById("currentpersec").innerHTML = "Current Cookies per second: " + newautovalue;
+    }
   }
 }
 function enoughcookies(){
@@ -56,8 +59,14 @@ function notenoughcookies(){
   }
 }
 function add_autovalue(){
-  counter += autovalue
-  score.innerHTML = counter;
+  if (prestige <= 0) {
+    counter += autovalue
+    score.innerHTML = counter;
+  }
+  else if (prestige > 0) {
+    counter += newautovalue
+    score.innerHTML = counter;
+  }
 }
 function harvest() {
   if (prestige <= 0){
@@ -73,6 +82,7 @@ function buyupgrade1(){
   if (counter >= 10) {
     counter -= 10
     addedvalue += 1
+    newaddedvalue = addedvalue * prestige * 2;
     score.innerHTML = counter;
   }
 };
@@ -80,6 +90,7 @@ function buyupgrade2(){
   if (counter >= 100) {
     counter -= 100
     addedvalue += 10
+    newaddedvalue = addedvalue * prestige * 2;
     score.innerHTML = counter;
   }
 }
@@ -87,6 +98,7 @@ function buyupgrade3(){
   if (counter >= 100) {
     counter -= 100
     autovalue += 1
+    newautovalue = autovalue * prestige * 2;
     score.innerHTML = counter;
   }
 };
@@ -94,6 +106,7 @@ function buyupgrade4(){
   if (counter >= 1000) {
     counter -= 1000
     autovalue += 10
+    newautovalue = autovalue * prestige * 2;
     score.innerHTML = counter;
   }
 };
