@@ -1,6 +1,6 @@
 
 let scores = document.getElementById("score");
-let counter = 0;
+let counter = 10000000;
 let prestige = 0;
 let addedvalue = 1;
 let newaddedvalue = addedvalue * prestige * 2; 
@@ -176,4 +176,9 @@ function buyupgrade8(){
     score.innerHTML = counter;
   }
 };
-
+function loulouboss(){
+  if (counter >= 1000000) {
+    counter -= 1000000
+    window.location.replace("/bossfight.html");
+  }
+}
