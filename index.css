@@ -1,11 +1,14 @@
 body {
     text-align: center;
+    background-image: url('https://i.postimg.cc/kXFd8v2Y/kaffee.jpg');
 }
 .title {
     font-size: xx-large;
+    color: white;
 }
 .score {
     font-size: xx-large;
+    color: white;
 }
 .div1 {
     height: 100px
