@@ -17,8 +17,10 @@ let func3 = notenoughcookies;
 let run3 = setInterval("func3()", 10);
 let func4 = currentclicks;
 let run4 = setInterval("func4()", 10);
-let func5
+let func5;
 let run5 = setInterval("func5()", 1000);
+let func6 = loulouenough;
+let run6 = setInterval("func6()", 10)
 
 function currentclicks() {
   if (prestige <= 0) {
@@ -34,8 +36,7 @@ function currentclicks() {
     }
   }
 }
-function enoughcookies(){
-  //loulouboss
+function loulouenough(){
   if (counter >= 1) {
     document.getElementById("LouLoutext2").style.visibility = "visible";
   }
@@ -62,7 +63,8 @@ function enoughcookies(){
       prestige += 1
     }
   }
-  //loulouboss
+}
+function enoughcookies(){
   if (counter >= 10) {
     document.getElementById("butup1").style.backgroundColor = "green";
   }
