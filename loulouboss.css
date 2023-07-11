@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    background-image: url("https://i.postimg.cc/7Y0x61q6/dungeon.jpg");
+}
+.LouLoutext {
+    color: red;
+    font-size: xx-large;
+    font-family: sans-serif;
+}
+.LouLoutext2 {
+    color: red;
+    font-size: xx-large;
+    font-family: sans-serif;
+    visibility: hidden;
+}
+.clickto {
+    color: white;
+    font-size: xx-large;
+    font-family: sans-serif;
+}
+.timer {
+    color: white;
+    font-size: xx-large;
+    font-family: sans-serif;
+    visibility: hidden;
+}
+.LouLoutext4 {
+    color: red;
+    font-size: xx-large;
+    font-family: sans-serif;
+    visibility: hidden;
+}
+.butwon {
+    visibility: hidden;
+    font-size: xx-large;
+    font-family: sans-serif;
+}

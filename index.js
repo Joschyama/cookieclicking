@@ -3,6 +3,8 @@ let scores = document.getElementById("score");
 let counter = 0;
 let prestige = 0;
 let addedvalue = 1;
+let fakeloulouvalue = 1;
+let timer = 3
 let newaddedvalue = addedvalue * prestige * 2; 
 let autovalue = 0;
 let newautovalue = autovalue * prestige * 2;
@@ -15,6 +17,8 @@ let func3 = notenoughcookies;
 let run3 = setInterval("func3()", 10);
 let func4 = currentclicks;
 let run4 = setInterval("func4()", 10);
+let func5
+let run5 = setInterval("func5()", 1000);
 
 function currentclicks() {
   if (prestige <= 0) {
@@ -31,6 +35,34 @@ function currentclicks() {
   }
 }
 function enoughcookies(){
+  //loulouboss
+  if (counter >= 1) {
+    document.getElementById("LouLoutext2").style.visibility = "visible";
+  }
+  if (counter >= 2) {
+    document.getElementById("LouLoutext3").style.visibility = "visible";
+  }
+  if (counter >= 10) {
+    document.getElementById("LouLoutext2").innerHTML = "";
+    document.getElementById("LouLoutext3").innerHTML = "Hängebauch!";
+    document.getElementById("clickto").innerHTML = "Click 100 times!";
+    func5 = timerdown;
+    if (timer <= 0 && counter < 110) {
+      document.getElementById("del").innerHTML = "";
+      document.getElementById("LouLoutext4").style.visibility = "visible";
+    }
+    else if (timer <= 0 && counter >= 110) {
+      document.getElementById("del2").innerHTML = ""
+      document.getElementById("timer").innerHTML = ""
+      clearInterval(run5)
+      document.getElementById("LouLoutext2").innerHTML = "Hänge-...";
+      document.getElementById("LouLoutext3").innerHTML = "bauch";
+      document.getElementById("clickto").innerHTML = "";
+      document.getElementById("butwon").style.visibility = "visible";
+      prestige += 1
+    }
+  }
+  //loulouboss
   if (counter >= 10) {
     document.getElementById("butup1").style.backgroundColor = "green";
   }
@@ -62,6 +94,11 @@ function enoughcookies(){
     document.getElementById("loulouboss").style.visibility = "visible"
   }
 };
+function timerdown() {
+  timer -= 1
+  document.getElementById("timer").style.visibility = "visible"
+  document.getElementById("timer").innerHTML = timer;
+}
 function notenoughcookies(){
   if (counter < 10) {
   document.getElementById("butup1").style.backgroundColor = "red";
@@ -113,6 +150,9 @@ function harvest() {
     counter += newaddedvalue;
     score.innerHTML = counter;
   }
+}
+function harvestloulou(){
+  counter += fakeloulouvalue;
 }
 function buyspec1(){
   if (counter >= 100000){
@@ -190,6 +230,6 @@ function buyupgrade8(){
 };
 function loulouboss(){
   if (counter >= 1000000) {
-    counter -= 1000000
+    counter -= counter
   }
 }
