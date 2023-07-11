@@ -4,7 +4,7 @@ let counter = 0;
 let prestige = 0;
 let addedvalue = 1;
 let fakeloulouvalue = 1;
-let timer = 3
+let timer = 31
 let newaddedvalue = addedvalue * prestige * 2; 
 let autovalue = 0;
 let newautovalue = autovalue * prestige * 2;
@@ -49,7 +49,7 @@ function enoughcookies(){
     func5 = timerdown;
     if (timer <= 0 && counter < 110) {
       document.getElementById("del").innerHTML = "";
-      document.getElementById("LouLoutext4").style.visibility = "visible";
+      document.getElementById("del2").style.visibility = "visible";
     }
     else if (timer <= 0 && counter >= 110) {
       document.getElementById("del2").innerHTML = ""
