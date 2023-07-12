@@ -1,11 +1,11 @@
 window. onbeforeunload = function (e) { localStorage. clear();};
 let scores = document.getElementById("score");
 let counter = 0;
-let prestvalue = 0
-let prestige = localStorage.getItem('prestige');
+let prestvalue;
+let prestige = 0 + localStorage.getItem('prestige');
 let addedvalue = 1;
 let fakeloulouvalue = 1;
-let timer = 31
+let timer = 1
 let newaddedvalue = addedvalue * prestige * 2; 
 let autovalue = 0;
 let newautovalue = autovalue * prestige * 2;
@@ -24,8 +24,8 @@ let func6 = loulouenough;
 let run6 = setInterval("func6()", 10)
 
 function addprestige(){
-  localStorage.setItem('prestige', prestvalue += 1);
-  document.getElementById("butwon1").style.visibility = "hidden";
+  prestvalue += 1
+  localStorage.setItem('prestige', prestvalue);
 }
 function currentclicks() {
   if (prestige <= 0) {
