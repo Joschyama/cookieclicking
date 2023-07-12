@@ -1,8 +1,7 @@
-window. onbeforeunload = function (e) { localStorage. clear();};
+window. onbeforeunload = function() { localStorage. removeItem(key); return ''; }; 
 let scores = document.getElementById("score");
 let counter = 0;
-let prestvalue;
-let prestige = 0 + localStorage.getItem('prestige');
+let prestige = parseInt(window.localStorage.getItem('prestige'));
 let addedvalue = 1;
 let fakeloulouvalue = 1;
 let timer = 1
@@ -24,8 +23,8 @@ let func6 = loulouenough;
 let run6 = setInterval("func6()", 10)
 
 function addprestige(){
-  prestvalue += 1
-  localStorage.setItem('prestige', prestvalue);
+  prestige += 1
+  window.localStorage.setItem('prestige', prestige);
 }
 function currentclicks() {
   if (prestige <= 0) {
@@ -65,7 +64,6 @@ function loulouenough(){
       document.getElementById("LouLoutext3").innerHTML = "bauch";
       document.getElementById("clickto").innerHTML = "";
       document.getElementById("butwon").style.visibility = "visible";
-      document.getElementById("butwon1").style.visibility= "visible";
     }
   }
 }
