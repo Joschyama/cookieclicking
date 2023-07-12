@@ -1,7 +1,7 @@
 window. onbeforeunload = function() { localStorage. removeItem(key); return ''; }; 
 let scores = document.getElementById("score");
 let counter = 1000000;
-let prestige2 = window.localStorage.setItem("prestige", 0)
+let prestige2;
 let prestige = parseInt(window.localStorage.getItem('prestige'));
 let addedvalue = 1;
 let fakeloulouvalue = 1;
@@ -24,6 +24,7 @@ let func6 = loulouenough;
 let run6 = setInterval("func6()", 10)
 
 function addprestige(){
+  prestige2 = window.localStorage.setItem("prestige", 0)
   prestige += 1
   window.localStorage.setItem('prestige', prestige)
 }
