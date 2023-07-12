@@ -24,6 +24,7 @@ let func6 = loulouenough;
 let run6 = setInterval("func6()", 10)
 
 function addprestige(){
+  //has to be defined before prestige can only be defined once because else it gets back to zero after loulouboss
   prestige2 = window.localStorage.setItem("prestige", 0)
   prestige += 1
   window.localStorage.setItem('prestige', prestige)
