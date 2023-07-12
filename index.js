@@ -1,6 +1,6 @@
 window. onbeforeunload = function() { localStorage. removeItem(key); return ''; }; 
 let scores = document.getElementById("score");
-let counter = 1000000;
+let counter = 0;
 let prestige2;
 let prestige = parseInt(window.localStorage.getItem('prestige'));
 let addedvalue = 1;
