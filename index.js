@@ -1,7 +1,8 @@
-
+window. onbeforeunload = function (e) { localStorage. clear();};
 let scores = document.getElementById("score");
-let counter = 0;
-let prestige = 0;
+let counter = 10000000;
+let prestvalue = 0
+let prestige = localStorage.getItem('prestige');
 let addedvalue = 1;
 let fakeloulouvalue = 1;
 let timer = 31
@@ -22,6 +23,10 @@ let run5 = setInterval("func5()", 1000);
 let func6 = loulouenough;
 let run6 = setInterval("func6()", 10)
 
+function addprestige(){
+  localStorage.setItem('prestige', prestvalue += 1);
+  document.getElementById("butwon1").style.visibility = "hidden";
+}
 function currentclicks() {
   if (prestige <= 0) {
     document.getElementById("currentperclick").innerHTML = "Current Cookies per click: " + addedvalue;
@@ -60,7 +65,7 @@ function loulouenough(){
       document.getElementById("LouLoutext3").innerHTML = "bauch";
       document.getElementById("clickto").innerHTML = "";
       document.getElementById("butwon").style.visibility = "visible";
-      prestige += 1
+      document.getElementById("butwon1").style.visibility= "visible";
     }
   }
 }
