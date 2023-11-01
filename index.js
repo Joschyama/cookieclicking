@@ -1,4 +1,3 @@
-window. onbeforeunload = function() { localStorage. removeItem(key); return ''; }; 
 let scores = document.getElementById("score");
 let counter = 0;
 let prestige2;
